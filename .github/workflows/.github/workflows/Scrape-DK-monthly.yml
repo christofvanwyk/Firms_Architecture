@@ -20,7 +20,7 @@ jobs:
         run: pip install -r requirements.txt  # Edit if you add more
 
       - name: Run script
-        run: python DanskeArk.py
+        run: python Scrape-DK.py
 
       - name: Upload CSV
         uses: actions/upload-artifact@v2

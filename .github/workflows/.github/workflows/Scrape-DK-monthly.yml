@@ -1,4 +1,4 @@
-name: Monthly Scraping
+name: Monthly Scraping DK
 
 on:
   schedule:
@@ -17,10 +17,10 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # If you have dependencies
+        run: pip install -r requirements.txt  # Edit if you add more
 
       - name: Run script
-        run: python your_script.py  # Replace with the path to your Python script
+        run: python DanskeArk.py
 
       - name: Upload CSV
         uses: actions/upload-artifact@v2

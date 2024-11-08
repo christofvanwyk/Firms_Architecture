@@ -1,4 +1,4 @@
-name: Monthly Scraping DK
+name: Monthly Scraping DK (https://www.danskeark.dk/)
 
 on:
   schedule:

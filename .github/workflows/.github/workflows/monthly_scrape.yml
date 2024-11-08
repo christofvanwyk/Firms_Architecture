@@ -1,0 +1,29 @@
+name: Monthly Scraping
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Runs at midnight on the first day of each month
+
+jobs:
+  run-scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # If you have dependencies
+
+      - name: Run script
+        run: python your_script.py  # Replace with the path to your Python script
+
+      - name: Upload CSV
+        uses: actions/upload-artifact@v2
+        with:
+          name: architecture-firms
+          path: "*.csv"
